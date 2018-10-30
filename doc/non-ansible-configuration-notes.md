@@ -12,7 +12,7 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install python-certbot-nginx
 mkdir -p /home/libuv/www/.well-known/acme-challenge/
-certbot --manual certonly -d dist.libuv.org -m build@iojs.org
+certbot --nginx certonly -d dist.libuv.org -m build@iojs.org --agree-tos
 # take the CODE and the FILE and insert into the following command:
 echo "CODE" > /home/libuv/www/.well-known/acme-challenge/FILE
 ```
